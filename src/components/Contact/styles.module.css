@@ -1,0 +1,45 @@
+.containerContact {
+  min-height: 75vh;
+
+  /* temp */
+  /* border: solid 1px orange; */
+
+
+
+
+}
+
+.contactMethodContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  /* border: blue 5px solid; */
+}
+
+.containerContact p {
+  font-size: 2em;
+}
+
+.contactMethod {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.contactMethod svg {
+  fill: var(--primary-color);
+  transition: var(--transition-duration);
+  width: 24px;
+}
+
+@media (max-width:600px) {
+  .containerContact {
+    min-height: 62vh;
+  }
+
+  .containerContact p {
+    font-size: 1em;
+  }
+  
+}

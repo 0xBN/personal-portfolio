@@ -1,0 +1,96 @@
+.carouselContainer {
+  background-color: var(--background-color);
+  /* height: var(--gallery-size-desktop); */
+  padding-top: 56.25%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+
+  /* temp */
+  position: relative;
+  /* border: solid 4px green; */
+  /* height: var(--gallery-size-desktop); */
+  /* height: 100%; */
+
+}
+
+
+
+.slide {
+  inset: 0;
+  position: absolute;
+  
+}
+
+.slide>img {
+  height: var(--gallery-size-desktop);
+  object-fit: cover;
+  opacity: 0;
+  /* border-radius: 5px; */
+
+}
+
+.slide[data-active='true']>img {
+  opacity: 1;
+}
+
+
+.carouselContainer button {
+  background-color: rgba(0,0,0,.4);
+  /* color: rgba(255, 255, 255, 0.2); */
+  border-radius: 5px;
+  cursor: pointer;
+  padding: .5em;
+  height: 20%;
+  -webkit-tap-highlight-color: transparent;
+  
+}
+
+.carouselContainer button:hover {
+  background-color: rgba(0,0,0,.3);
+}
+
+.carouselContainer button:hover svg {
+  fill: var(--onSurface-color);
+}
+.carouselContainer svg {
+  /* z-index: 1; */
+  pointer-events: none;
+  fill: rgba(255, 255, 255, 0.3);
+  fill: white;
+  width: 24px;
+}
+
+.nextButton,
+.prevButton {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+}
+
+.nextButton {
+  right: 0em;
+}
+
+.prevButton {
+  left: 0em;
+}
+
+@media (max-width:600px) {
+  .carouselContainer {
+    height: var(--gallery-size-desktop);
+  
+  }
+  
+  .slide img {
+    /* height: 300px; */
+  }
+
+  .carouselContainer svg {
+    fill: white;
+
+  }
+}
+

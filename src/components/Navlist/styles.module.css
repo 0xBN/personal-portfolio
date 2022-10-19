@@ -1,0 +1,47 @@
+.navlist {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.navlist img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navlist ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.navlist li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navlist li svg {
+  width: 2rem;
+  fill: var(--primary-color);
+}
+
+.profilePictureContainer {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.navlist img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .navlist img {
+    width: 70%;
+  }
+}

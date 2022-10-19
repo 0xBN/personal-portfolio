@@ -1,0 +1,38 @@
+.themeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: .25s ease-out;
+  padding: 1em;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+
+  /* temp */
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0; */
+}
+
+.themeButton:hover {
+  /* transform: scale(1.05); */
+}
+
+.themeButton strong {
+  color: var(--onSurface-color);
+  font-size: 1rem;
+}
+
+.icon {
+  fill: red;
+  height: 2rem;
+}
+
+.moon {
+  fill: yellow;
+}
+
+.sun {
+  color: orangered;
+}

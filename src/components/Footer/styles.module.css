@@ -1,0 +1,25 @@
+.test {
+  color: red;
+}
+
+.footerContainer {
+  /* border: solid 1px orange; */
+  text-align: center;
+  padding: 1rem;
+}
+
+.footerContainer p {
+  font-size: 1rem;
+}
+
+.footerContainer span {
+  color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+
+.footerContainer p {
+  font-size: .65rem;
+}
+  
+}

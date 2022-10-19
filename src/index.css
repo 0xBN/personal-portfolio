@@ -1,13 +1,222 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', 'Roboto', 'Source Sans Pro', sans-serif;
+  --fast-transition: .25s;
+  --transition-duration: .5s;
+  --page-max-width: 1200px;
+  --sidebar-margin: 200px;
+  --mobile-nav-button: 30px;
+  --section-min-height: 90vh;
+  --section-padding: 1em;
+  --section-margin: 1em;
+  --scroll-margin-desktop: 5em;
+  --scroll-margin-mobile: 4em;
+  --between-sections: 3em;
+  --side-padding: 0 1em;
+  --gallery-size-desktop: calc(var(--section-min-height) / 1.5);
+  
+  /* temp */
+  --between-sections: 2em;
+  --section-min-height: 50vh;
+  /* --transition-duration: 1s; */
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  box-sizing: border-box;
+}
+
+/* dark theme */
+.dark {
+  --primary-color: #BB86FC;
+  --primaryVar-color: #3700B3;
+  --secondary-color: #03DAC6;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --error-color: #CF6679;
+  --onPrimary-color: #FFF;
+  --onSecondary-color: #000000;
+  --onBackground-color: #FFFFFF;
+  --onSurface-color: #FFFFFF;
+  --onError-color: #000000;
+
+}
+
+/* light theme */
+.light {
+  
+  --primary-color: #6200EE;
+  --primaryVar-color: #3700B3;
+  --secondary-color: #007070;
+  --secondaryVar-color: #03DAC6;
+  --background-color: #FFFFFF;
+  --surface-color: #e8e8e8;
+  --error-color: #B00020;
+  --onPrimary-color: #FFFFFF;
+  --onSecondary-color: #000000;
+  --onBackground-color: #000000;
+  --onSurface-color: #000000;
+  --onError-color: #FFFFFF;
+
+
+}
+
+
+
+.theme {
+  background-color: var(--background-color);
+  color: var(--onBackground-color);
+  transition: var(--fast-transition);
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* background-color: #121212; */
+  /* color: white; */
+}
+
+/* Typography */
+
+/* h1 {} */
+
+h2 {
+  font-size: 2.5rem;
+  /* padding-bottom: var(--section-padding); */
+  background-color: var(--primary-color);
+  color: var(--onPrimary-color);
+  padding: .5em;
+  width: 100%;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 1.5rem;
+
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+a {
+  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Layout */
+.container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.hidden {
+  display: none;
+}
+
+.section {
+  min-height: var(--section-min-height);
+  scroll-margin: var(--scroll-margin-desktop);
+  padding: var(--side-padding);
+  margin-bottom: var(--between-sections);
+
+  /* temp */
+  /* border: solid green 5px; */
+
+}
+
+::-webkit-scrollbar {
+  width: .5em;
+}
+::-webkit-scrollbar-track {
+  background: hsl(120 75% 50% /1);
+  background: var(--surface-color);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(120 100% 20% /1);
+  background: var(--primary-color);
+}
+
+
+
+.sectionTitle {
+  padding:5em 0 2.5em 0;
+  width: 100%;
+}
+
+@media (max-width:600px) {
+  .sectionTitle {
+    padding:2em 0 2em 0;
+  }
+  
+}
+
+.card {
+  z-index: -1;
+  opacity: .2;
+  opacity: 0;
+  transform: translateY(200px);
+  filter: blur(5px)
+}
+
+.quickShow {
+  transition: 0s;
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0)
+}
+
+.show {
+  transition: transform var(--transition-duration), opacity var(--transition-duration), filter 1s;
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0)
+}
+
+.textCenter {
+  text-align: center;
+}
+
+
+
+
+@media (max-width:600px) {
+  :root {
+    --sidebar-margin:0;
+  }
+
+  .section {
+    scroll-margin: var(--scroll-margin-mobile);
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+
+  /* Temp */
+  .dark,
+  .light {
+    /* background-color: blue; */
+  }
+
+}
+

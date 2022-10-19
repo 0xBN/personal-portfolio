@@ -1,0 +1,41 @@
+.containerProjects {
+  /* temp */
+  /* border: 2px solid magenta; */
+  
+}
+
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: -1em;
+  justify-items: center;
+  align-items: flex-start;
+  
+  /* temp */
+  /* border: solid orange 2px; */
+}
+
+.projectCard {
+  width: 80%;
+  /* padding-bottom: calc(9/16 * 100%); */
+}
+
+
+@media (max-width: 900px) {
+
+  .containerProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110%;
+  }
+
+}

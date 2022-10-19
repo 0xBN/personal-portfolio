@@ -1,0 +1,194 @@
+.containerMainIntro {
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  /* temp */
+  /* border: solid 2px blue; */
+}
+
+
+.greeting {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+
+.userName {
+  color: var(--onSurface-color);
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.userDescription {
+  margin-bottom: var(--section-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+.userDescription>h4:last-child {
+  font-weight: 600;
+}
+
+.desc2Show  {
+  color: var(--secondary-color);  
+}
+
+
+
+.userDescription2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: var(--section-margin);
+}
+
+
+
+
+
+.contactButtons {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+
+
+
+
+.contactButtons svg {
+  width: 1.5rem;
+  fill: var(--primary-color);
+}
+
+.contactButtons button {
+  background-color: transparent;
+  color: var(--onSurface-color);
+  border: none;
+  cursor: pointer;
+  padding: .5em;
+  border-radius: 5px;
+  transition: var(--transition-duration);
+  width: 8rem;
+  justify-content: center;
+  gap: .5em;
+  font-size: 1.2rem;
+
+}
+
+.contactButtons button:hover {
+  background-color: var(--surface-color);
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+@media (max-width:600px) {
+  .containerMainIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+    min-height: 75vh;
+    padding-top: 1em;
+
+
+  }
+
+  .userName {
+    font-size: 4rem;
+  }
+
+  .userDescription {
+    margin-bottom: 0;
+  }
+
+  .contactButtons {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    gap: 1em;
+  }
+ 
+  
+  .contactButtons button {
+    /* background-color: #2c2c2c; */
+    background-color: var(--surface-color);
+    font-size: .8rem;
+    width: 100%;
+  }
+
+  .contactButtons svg {
+    width: 1.2rem;
+  }
+
+  .contactMethod {
+    gap: .1em;
+  }
+}
+
+
+
+/* Before transiton */
+.greetingInitial,
+.usernameInitial,
+.desc1Initial,
+.desc2Initial,
+.desc3Initial {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+
+
+
+.button1Initial,
+.button2Initial,
+.button3Initial {
+  opacity: 0;
+  transform: translateX(-25%);
+}
+
+
+/* Transition durations */
+.greetingShow {
+  transition: var(--transition-duration) 500ms;
+}
+
+.usernameShow {
+  transition: var(--transition-duration) 700ms;
+}
+
+.desc1Show {
+  transition: var(--transition-duration) 900ms;
+}
+.desc2Show {
+  transition: var(--transition-duration) 1100ms;
+}
+
+.desc3Show {
+  transition: var(--transition-duration) 1300ms;
+}
+
+.button1Show {
+  transition: var(--transition-duration) 1600ms ease-in-out;
+}
+
+.button2Show {
+  transition: var(--transition-duration) 1800ms ease-in-out;
+}
+
+.button3Show {
+  transition: var(--transition-duration) 2000ms ease-in-out;
+}
+
+

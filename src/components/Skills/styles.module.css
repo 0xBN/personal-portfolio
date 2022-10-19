@@ -1,0 +1,45 @@
+.containerSkills {
+  /* temp */
+  /* border: solid 2px blue; */
+}
+
+.skills img {
+  width: 100%;
+}
+
+.skills>li{
+  width: 100%;
+}
+
+.skills li {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  /* border: 1px solid green; */
+  padding: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.skills li img {
+  order: 0;
+}
+
+.skills li p {
+  order: 1;
+}
+
+
+.skills {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 1em;
+}
+
+@media (max-width:600px) {
+  .containerSkills {
+
+  }
+}

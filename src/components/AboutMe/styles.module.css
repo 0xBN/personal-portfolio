@@ -1,0 +1,26 @@
+.containerAbout {
+
+  /* temp */
+
+}
+
+.containerAbout h2 {
+  /* padding-bottom: var(--section-padding); */
+}
+
+.containerAbout strong {
+  color: var(--primary-color)
+}
+
+.containerAbout p {
+  padding: .5em;
+}
+
+@media (max-width: 600px) {
+  .containerAbout {
+
+
+    /* temp */
+    /* border: solid 1px orange; */
+  }
+}

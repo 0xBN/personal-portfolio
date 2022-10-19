@@ -1,0 +1,32 @@
+.containerApp {
+  /* border: solid 2px green; */
+  position: relative;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+.containerMain {
+  margin-left: var(--sidebar-margin);
+  /* border: solid 2px magenta; */
+  padding: 1em 0 0 0;
+}
+
+.overlay {
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: 1;
+  background-color: rgba(0,0,0,.6);
+}
+
+/* @media (max-width:600px) { */
+@media (max-width:900px) {
+  .containerMain {
+    padding: 4em 0 0 0;
+    margin-left: 0;
+  }
+
+}
+
